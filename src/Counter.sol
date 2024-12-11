@@ -20,7 +20,8 @@ contract Counter {
         number++;
     }
     
-    function add(uint256 value) public { 
-	    maxUint += value; 
+    function add() public payable {
+        require(msg.value > 0, "No ETH sent");
+        maxUint += msg.value;
     }
 }

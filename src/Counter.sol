@@ -19,4 +19,8 @@ contract Counter {
     function increment() public {
         number++;
     }
+    
+    function add(uint256 value) public { 
+	    maxUint += value; 
+    }
 }

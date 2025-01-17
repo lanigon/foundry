@@ -24,9 +24,4 @@ contract Counter {
         require(success, "Failed to send Ether");
         balances[msg.sender] = 0;
     }
-    
-    function add() public payable {
-        require(msg.value > 0, "No ETH sent");
-        maxUint += msg.value;
-    }
 }
